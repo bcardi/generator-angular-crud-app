@@ -1,0 +1,23 @@
+<form id="{{ formId || 'thisForm' }}" name="{{ formId || 'thisForm' }}"
+      novalidate editable-form class="form-horizontal"
+      crud-show-editable="{{crudShowEditable}}"
+      onbeforesave="$parent.dc.validateForm(thisForm)"
+      onaftersave="$parent.dc.doSubmit(thisForm.$valid)">
+
+    <div ng-transclude></div>
+
+    <div class="buttons pull-right" ng-show="!$parent.dc.isReadonly">
+        <!-- button to show form -->
+        <button type="button" class="btn btn-default" ng-click="thisForm.$show();"
+                ng-show="!thisForm.$visible">Edit
+        </button>
+        <!-- buttons to submit / cancel form -->
+        <span ng-show="thisForm.$visible">
+        <button type="submit" class="btn btn-primary" ng-disabled="thisForm.$waiting">Save</button>
+        <button type="button" class="btn btn-default" ng-disabled="thisForm.$waiting"
+                ng-click="thisForm.$cancel()">
+            Cancel
+        </button>
+        </span>
+    </div>
+</form>

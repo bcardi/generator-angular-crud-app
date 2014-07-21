@@ -1,0 +1,45 @@
+<!--
+    Todo: Layout page header values
+    Todo: Layout body
+-->
+<div id="messages" class="alert alert-success" data-ng-show="dc.messages" data-ng-bind="dc.messages"></div>
+
+<div class="workspace-header">
+    <div class="row">
+        <!-- @@detail-page-header-values@@ -->
+        <div class="col-sm-4">
+            <div class="pull-right">
+                <a href="#/{{dc.context.resourceName}}">Show List</a>
+                <button class="btn btn-link" ng-click="dc.showPreviousItem()">Previous</button>
+                <button class="btn btn-link" ng-click="dc.showNextItem()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Todo: Add Detail page header values -->
+    </div>
+</div>
+
+<!--
+<div>
+    <button class="btn btn-default" ng-click="dc.expandAll()">Expand All</button>
+</div>
+-->
+
+<div class="workspace-body">
+    <tabset justified="true">
+        <!-- Todo rename tab1 to real name -->
+        <tab heading="Tab 1" disabled="dc.isTrue(dc.metadata.form.tabs.tab1.isDisabled,false)">
+            <crud-editable-form form-id="thisForm" crud-show-editable="dc.showEditable" readonly="dc.isReadonly">
+                <div ng-include="'app/<%= resourceNamePlural %>/detail/tab1.html'"></div>
+            </crud-editable-form>
+        </tab>
+        <!-- Todo rename tab2 to real name -->
+        <tab heading="Tab 2" disabled="dc.isTrue(dc.metadata.form.tabs.tab2.isDisabled,true)">
+            <crud-editable-form form-id="thisForm" crud-show-editable="dc.showEditable" readonly="dc.isReadonly">
+                <div ng-include="'app/<%= resourceNamePlural %>/detail/tab2.html'"></div>
+            </crud-editable-form>
+        </tab>
+    </tabset>
+</div>

@@ -1,0 +1,38 @@
+{
+    "form": {
+        "tabs": {
+            "request": {
+                "isDisabled": false
+            },
+            "location": {
+                "isDisabled": true
+            }
+        },
+        "sections": {
+            "address": {
+                "isOpen": true
+            },
+            "description": {
+                "isOpen": true
+            }
+        },
+        "choiceGroups": {
+            "countries": [
+                {
+                    "value": "USA",
+                    "text": "United States"
+                }
+            ],
+            "states": [
+                {
+                    "value": "IL",
+                    "text": "Illinois"
+                },
+                {
+                    "value": "WI",
+                    "text": "Wisconsin"
+                }
+            ]
+        }
+    }
+}
