@@ -15,7 +15,9 @@ var ResourceService = (function () {
     }
     ResourceService.prototype.getList = function (params) {
         "use strict";
-        return this.resource.query({ resourceName: params.resourceName }).$promise;
+        var queryParams = { resourceName: params.resourceName };
+        _.merge(queryParams, params.searchModel);
+        return this.resource.query(queryParams).$promise;
     };
 
     ResourceService.prototype.createItem = function (params, item) {

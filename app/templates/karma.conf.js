@@ -25,6 +25,8 @@ module.exports = function(config) {
         "bower_components/angular-xeditable/dist/js/xeditable.js",
         "bower_components/ng-grid/ng-grid-2.0.11.debug.js",
         "bower_components/lodash/dist/lodash.js",
+        "components/angular-crud/angular-crud.js",
+        "components/angular-crud-elasticsearch/resource-service.js",
         "app/app.js",
         "test/**/*-spec.js"
     ],
