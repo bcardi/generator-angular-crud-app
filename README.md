@@ -39,6 +39,8 @@ Install instructions can be found here: [http://docs.couchdb.org/en/latest](http
 
 **Note:** All of the terminal commands can be run from either a Windows command prompt or the WebStorm Terminal. 
 
+### Step 1: Create the project folder and files
+
 1. Create a folder for your new project. The folder name should either be specified in TitleCase or words-and-dashes.
 
         > mkdir my-new-project
@@ -54,39 +56,57 @@ Install instructions can be found here: [http://docs.couchdb.org/en/latest](http
     **Note:** It is normal to see a lot of output from this command. Bower and npm will also install dependencies.
     
 1. Review the output of the previous step and correct all bower or npm install errors.
+
+### Step 2: Setup a resource created by the yeoman generator
     
-1. Open your new project in WebStorm
-    
+1. Open project in WebStorm
 1. Follow the instructions in the README.MD file for the resource created for your app (app/resource/README.MD)
 
-1. Create the following file watchers (File > Settings > Project Settings > File Watchers). Accept all file watcher defaults unless otherwise specified.
-    1. TypeScript
-        * **Compile main files only:** checked
-        * **Arguments:** $FileNameWithoutExtension$.ts --out $FileNameWithoutExtension$.js --sourcemap --declaration
-        * **Output paths to refresh:** $FileNameWithoutExtension$.js:$FileNameWithoutExtension$.js.map:$FileNameWithoutExtension$.d.ts
-    1. Less
-        * **Track only root files:** checked
-        
-1. Manually run the file watchers
-    1. Select the project folder in Project View panel
-    1. Select "Help > Find Action" or (Ctrl + Shift + A) to open the find action popup window
-    1. Set “Include non-menu items” to true
-    1. Type the following text in the available input box: Run file watchers
-    1. Double-click “Run File Watchers” from the drop down list
-    1. See [Trigger file watcher manually](http://youtrack.jetbrains.com/issue/WEB-10043) for details on other ways to manually run the file watchers.
-    
-1. Add Karma run configuration
-    1. Select “Run > Edit Configurations”
-    1. Click the plus icon and select Karma
-    1. Set the following values. Accept defaults unless specified.
-        * Name: All Tests
-        * Configuration file: (select karma.conf.js from drop down)
-        
-1. Test Karma
-    1. Set the current configuration drop down to “All Tests”
-    1. Click the run icon
-    1. When instructed, click the link to open the browser
-    1. All tests should run without errors
+### Step 3: (optional) Adding another resource to your project
+1. Open a command terminal
+1. Set the current folder to your project folder
+1. Run the yeoman resource generator to create a new resource in your project
+
+        my-new-project> yo angular-crud-app:resource
+
+1. Follow the instructions above to setup the new resource in your project.
+
+### Step 4: Setup file watchers to compile TypeScript and LESS code
+
+1. Open project in WebStorm
+1. Select “File > Settings > Project Settings > File Watchers”
+1. Create a TypeScript file watcher. Accept all defaults unless specified here.
+    * **Compile main files only:** checked
+    * **Arguments:** $FileNameWithoutExtension$.ts --out $FileNameWithoutExtension$.js --sourcemap --declaration
+    * **Output paths to refresh:** $FileNameWithoutExtension$.js:$FileNameWithoutExtension$.js.map:$FileNameWithoutExtension$.d.ts
+1. Create a LESS file watcher. Accept all defaults unless specified here.
+    * **Track only root files:** checked
+
+### Step 5: Manually run the file watchers
+1. Open project in WebStorm
+1. Select the project folder in Project View panel
+1. Select "Help > Find Action" or (Ctrl + Shift + A) to open the find action popup window
+1. Set “Include non-menu items” to true
+1. Type the following text in the available input box: Run file watchers
+1. Double-click “Run File Watchers” from the drop down list
+1. See [Trigger file watcher manually](http://youtrack.jetbrains.com/issue/WEB-10043) for details on other ways to manually run the file watchers.
+
+### Step 6: Setup Karma for running unit tests
+
+1. Open project in WebStorm
+1. Select “Run > Edit Configurations”
+1. Click the plus icon and select Karma
+1. Set the following values. Accept defaults unless specified.
+    * Name: All Tests
+    * Configuration file: (select karma.conf.js from drop down)
+
+### Step 7: Running unit tests with Karma
+
+1. Open project in WebStorm
+1. Set the current configuration drop down to “All Tests”
+1. Click the run icon
+1. When instructed, click the link to open the browser
+1. All tests should run without errors
 
 
 ## License
