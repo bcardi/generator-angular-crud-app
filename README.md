@@ -2,11 +2,27 @@
 
 ## Prerequisites
 
-You must know the singular and plural name of at least one resource you will access on the server
+**Note:** You must know the singular and plural name of at least one resource you will access on the server
+
+### Install nodejs
+
+Download and install node.js. Instructions can be found here: http://nodejs.org/. This only needs to be done one time per PC.
+
+### Install TypeScript Transpiler
+
+Since we are installing TypeScript on the global npm workspace, you can run the command from any folder. This only needs to be done one time per PC.
+
+    > npm install -g typescript
+
+### Install LESS Transpiler
+
+Since we are installing LESS on the global npm workspace, you can run the command from any folder. This only needs to be done one time per PC.
+
+    > npm install -g less
 
 ### Install Yeoman
 
-Since we are installing Yeoman on the global npm workspace, you can run the command from any folder.
+Since we are installing Yeoman on the global npm workspace, you can run the command from any folder. This only needs to be done one time per PC.
 
     > npm install -g yo
 
