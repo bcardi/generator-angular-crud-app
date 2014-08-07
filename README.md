@@ -51,6 +51,10 @@ You can download the CouchDB Windows installer from here:
 download and run the latest installer. You should be able to use all the chosen defaults during the install process. 
 Install instructions can be found here: [http://docs.couchdb.org/en/latest](http://docs.couchdb.org/en/latest).
 
+### Setup WebStorm (optional)
+
+We recommend the WebStorm IDE for editing AngularJS based applications, but it is not required. See [http://www.jetbrains.com/webstorm/download/](http://www.jetbrains.com/webstorm/download/). 
+
 ## Create new project
 
 **Note:** All of the terminal commands can be run from either a Windows command prompt or the WebStorm Terminal. 
@@ -89,6 +93,8 @@ Install instructions can be found here: [http://docs.couchdb.org/en/latest](http
 
 ### Step 4: Setup file watchers to compile TypeScript and LESS code
 
+**Note:** If you are not using WebStorm, you will have to setup grunt or gulp tasks to transpile the TypeScript and LESS files.
+
 1. Open project in WebStorm
 1. Select “File > Settings > Project Settings > File Watchers”
 1. Create a TypeScript file watcher. Accept all defaults unless specified here.
@@ -108,6 +114,8 @@ Install instructions can be found here: [http://docs.couchdb.org/en/latest](http
 1. See [Trigger file watcher manually](http://youtrack.jetbrains.com/issue/WEB-10043) for details on other ways to manually run the file watchers.
 
 ### Step 6: Setup Karma for running unit tests
+
+**Note:** If you are not using WebStorm, you will have to setup grunt or gulp tasks to run your tests.
 
 1. Open project in WebStorm
 1. Select “Run > Edit Configurations”
