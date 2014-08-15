@@ -8,6 +8,12 @@
 
 Download and install node.js. Instructions can be found here: http://nodejs.org/. This only needs to be done one time per PC.
 
+### Install Bower Package Manager
+
+Since we are installing Bower on the global npm workspace, you can run the command from any folder. This only needs to be done one time per PC.
+
+    > npm install -g bower
+
 ### Install TypeScript Transpiler
 
 Since we are installing TypeScript on the global npm workspace, you can run the command from any folder. This only needs to be done one time per PC.
